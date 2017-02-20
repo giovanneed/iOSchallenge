@@ -1,12 +1,10 @@
 //
-//  AppDelegate.m
-//  MimoiOSCodingChallenge
-//
-//  Created by Johannes Berger on 15.02.17.
-//  Copyright © 2017 Mimohello GmbH. All rights reserved.
+//  Created by Mimohello GmbH on 16.02.17.
+//  Copyright (c) 2017 Mimohello GmbH. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "SettingsViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +15,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	SettingsViewController *vc = [[SettingsViewController alloc] init];
+	self.window.rootViewController = vc;
+	[self.window makeKeyAndVisible];
 	return YES;
 }
 

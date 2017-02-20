@@ -5,8 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface SettingsAvatar : UIView
+- (instancetype)initWithPremium:(BOOL)premium;
+- (void)updatePremium:(BOOL)premium;
 @end
-
