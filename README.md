@@ -27,7 +27,7 @@ Relevant Auth0 API: [Link_1](https://auth0.com/docs/api/authentication#database-
 [Link_2](https://auth0.com/docs/api/authentication#signup)
 Use `openid profile email` for the `scope` parameter
 
-## Additional task
+## Additional tasks
 
     - The existing SettingsViewController should display the email address of the user. Get this info from the JWT that you receive.
     - If the user activates the dark mode (switch in settings), inverse all colors: foreground color should be white, and background color should be black for the entire screen. Use SettingsViewController.swift to make these changes.
