@@ -22,8 +22,12 @@ class LoginViewController : UIViewController {
         Webservice.sharedInstance.login(withUsername: "giovanneed@gmail.com", password: "teste123") { (loginResponse) in
             
             if loginResponse.success == true {
+                                
+                let vc = SettingsViewController()
                 
-               print("Success")
+                self.present(vc, animated: true) {
+                    
+                }
                 
             } else {
                 if let error =  loginResponse.errorMessage {
