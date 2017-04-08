@@ -70,6 +70,10 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 @property (nonatomic, strong) UIDatePicker *timePicker;
 @property (nonatomic) BOOL didSetConstraints;
 @property BOOL userSubscribed;
+
+@property BOOL darkMode;
+
+
 @end
 
 @implementation SettingsViewController
@@ -79,12 +83,9 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setupTableSections];
-    [self setupTableSectionHeaderTitles];
-    [self setupTableSectionRowTitles];
-    [self setupTableCellIdentifiers];
-    [self setupTableView];
-	self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    [self setup];
+    
+   
 	
 	/* Code to be added after completion of the time feature in future release. Current release 1.2.3
 	self.timePicker = [[UIDatePicker alloc] init];
@@ -117,6 +118,21 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
     [nc removeObserver:self];
 }
 
+- (void)setup {
+    
+ 
+    self.darkMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"DarkMode"];
+    
+    [self setupTableSections];
+    [self setupTableSectionHeaderTitles];
+    [self setupTableSectionRowTitles];
+    [self setupTableCellIdentifiers];
+    [self setupTableView];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    
+}
+
 - (void)updateViewConstraints {
 	if (!self.didSetConstraints) {
 		/* Code to be added after completion of the time feature in future release. Current release 1.2.3
@@ -142,7 +158,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorColor = [UIColor grayColor];
-    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = self.darkMode ? [UIColor blackColor]  : [UIColor whiteColor];
     [self.view addSubview:self.tableView];
 
     NSDictionary *views = @{ @"tableView": self.tableView };
@@ -365,7 +381,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 		if (indexPath.row == SettingsTableSectionNotificationRowSwitch) {
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			cell.selectionSwitch.hidden = NO;
-			BOOL switchOn = NO;
+            BOOL switchOn = self.darkMode;
 			
 			[cell.selectionSwitch setOn:switchOn animated:NO];
 			cell.delegate = self;
