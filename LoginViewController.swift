@@ -19,6 +19,18 @@ class LoginViewController : UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         
+        Webservice.sharedInstance.login(withUsername: "Xgiovanneed@gmail.com", password: "teste123") { (loginResponse) in
+            
+            if loginResponse.success == true {
+                
+               print("Success")
+                
+            } else {
+                
+                print("Fail")
+
+            }
+        }
         
     }
 }
