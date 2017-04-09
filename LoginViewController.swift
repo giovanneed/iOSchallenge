@@ -21,8 +21,6 @@ class LoginViewController : UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        login.text = "giovanneed@gmail.com"
-        password.text = "teste123"
     }
     
   

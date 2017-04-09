@@ -175,13 +175,13 @@
 				2BCC6AB51E55A55A00585FA1 /* SettingsTableViewCell.swift */,
 				2BCC6AB71E55A68400585FA1 /* SettingsAvatar.h */,
 				2BCC6AB81E55A68400585FA1 /* SettingsAvatar.m */,
+				C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */,
+				C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */,
 				2BF3DF011E54B79A004DD445 /* Assets.xcassets */,
 				2BF3DF031E54B79A004DD445 /* LaunchScreen.storyboard */,
 				2BF3DF061E54B79A004DD445 /* Info.plist */,
 				2BF3DEF51E54B79A004DD445 /* Supporting Files */,
 				2BF3DF281E54B7DE004DD445 /* MimoiOSCodingChallenge-Bridging-Header.h */,
-				C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */,
-				C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */,
 			);
 			path = MimoiOSCodingChallenge;
 			sourceTree = "<group>";

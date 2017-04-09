@@ -67,10 +67,6 @@
 }
 
 
-//https://s.gravatar.com/avatar/d155f89f2c2d9dc16436e05a07cf2e73?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fgi.png
-//https%3A%2F%2Fs.gravatar.com%2Favatar%2Fd155f89f2c2d9dc16436e05a07cf2e73%3Fs=480&r=pg&d=https%253A%252F%252Fcdn.auth0.co ... 2Fgi.png
-
-
 -(void)showProfileImageWithFrame:(CGRect)rect {
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
