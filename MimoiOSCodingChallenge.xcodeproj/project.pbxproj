@@ -24,12 +24,6 @@
 		C7D74AC61E99912700C66BF0 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */; };
 		C7D74AC71E99912700C66BF0 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */; };
 		C7D74AC81E99912700C66BF0 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */; };
-		C7D74ACA1E9993E500C66BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */; };
-		C7D74ACB1E9993E500C66BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */; };
-		C7D74ACC1E9993E500C66BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */; };
-		C7D74ACE1E9998F100C66BF0 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74ACD1E9998F000C66BF0 /* Webservice.swift */; };
-		C7D74ACF1E9998F100C66BF0 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74ACD1E9998F000C66BF0 /* Webservice.swift */; };
-		C7D74AD01E9998F100C66BF0 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74ACD1E9998F000C66BF0 /* Webservice.swift */; };
 		C7D74AD21E999A1300C66BF0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AD11E999A1300C66BF0 /* Models.swift */; };
 		C7D74AD31E999A1300C66BF0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AD11E999A1300C66BF0 /* Models.swift */; };
 		C7D74AD41E999A1300C66BF0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AD11E999A1300C66BF0 /* Models.swift */; };
@@ -45,6 +39,12 @@
 		C7D74AE21E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */; };
 		C7D74AE31E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */; };
 		C7D74AE41E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */; };
+		C7D74AE61E9AE00500C66BF0 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE51E9AE00500C66BF0 /* Webservice.swift */; };
+		C7D74AE71E9AE00500C66BF0 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE51E9AE00500C66BF0 /* Webservice.swift */; };
+		C7D74AE81E9AE00500C66BF0 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE51E9AE00500C66BF0 /* Webservice.swift */; };
+		C7D74AEA1E9AE02400C66BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE91E9AE02400C66BF0 /* LoginViewController.swift */; };
+		C7D74AEB1E9AE02400C66BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE91E9AE02400C66BF0 /* LoginViewController.swift */; };
+		C7D74AEC1E9AE02400C66BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE91E9AE02400C66BF0 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,13 +95,13 @@
 		C0752AC0B1484421C9660620 /* Pods_MimoiOSCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CA2B99159E74AED055510E /* Pods_MimoiOSCodingChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
-		C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
-		C7D74ACD1E9998F000C66BF0 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Webservice.swift; path = ../Webservice.swift; sourceTree = "<group>"; };
 		C7D74AD11E999A1300C66BF0 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C7D74AD51E999B1E00C66BF0 /* Webservice+Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Webservice+Authentication.swift"; sourceTree = "<group>"; };
 		C7D74AD91E99A1E800C66BF0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Webservice+Signup.swift"; sourceTree = "<group>"; };
 		C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Webservice+UserInfo.swift"; sourceTree = "<group>"; };
+		C7D74AE51E9AE00500C66BF0 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		C7D74AE91E9AE02400C66BF0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E18B8DDCBC35C4D884C0C7B3 /* Pods-MimoiOSCodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MimoiOSCodingChallengeTests/Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA866BE4B2BF25DEA765CAF4 /* Pods_MimoiOSCodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,8 +159,8 @@
 		2BF3DEF41E54B79A004DD445 /* MimoiOSCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				C7D74ACD1E9998F000C66BF0 /* Webservice.swift */,
 				C7D74AD51E999B1E00C66BF0 /* Webservice+Authentication.swift */,
+				C7D74AE51E9AE00500C66BF0 /* Webservice.swift */,
 				C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */,
 				C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */,
 				C7D74AD91E99A1E800C66BF0 /* Extensions.swift */,
@@ -175,7 +175,7 @@
 				2BCC6AB51E55A55A00585FA1 /* SettingsTableViewCell.swift */,
 				2BCC6AB71E55A68400585FA1 /* SettingsAvatar.h */,
 				2BCC6AB81E55A68400585FA1 /* SettingsAvatar.m */,
-				C7D74AC91E9993E500C66BF0 /* LoginViewController.swift */,
+				C7D74AE91E9AE02400C66BF0 /* LoginViewController.swift */,
 				C7D74AC51E99912600C66BF0 /* LoginStoryboard.storyboard */,
 				2BF3DF011E54B79A004DD445 /* Assets.xcassets */,
 				2BF3DF031E54B79A004DD445 /* LaunchScreen.storyboard */,
@@ -653,15 +653,15 @@
 				2BCC6AB91E55A68400585FA1 /* SettingsAvatar.m in Sources */,
 				C7D74AE21E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */,
 				2BF3DEFD1E54B79A004DD445 /* ViewController.m in Sources */,
+				C7D74AEA1E9AE02400C66BF0 /* LoginViewController.swift in Sources */,
 				2BF3DEFA1E54B79A004DD445 /* AppDelegate.m in Sources */,
 				2BCC6AB61E55A55A00585FA1 /* SettingsTableViewCell.swift in Sources */,
 				C7D74AD61E999B1E00C66BF0 /* Webservice+Authentication.swift in Sources */,
-				C7D74ACA1E9993E500C66BF0 /* LoginViewController.swift in Sources */,
 				2BF3DEF71E54B79A004DD445 /* main.m in Sources */,
+				C7D74AE61E9AE00500C66BF0 /* Webservice.swift in Sources */,
 				C7D74ADA1E99A1EA00C66BF0 /* Extensions.swift in Sources */,
 				2BF3DF2D1E54B7DF004DD445 /* SettingsViewController.swift in Sources */,
 				2BF3DF2C1E54B7DF004DD445 /* SettingsViewController.m in Sources */,
-				C7D74ACE1E9998F100C66BF0 /* Webservice.swift in Sources */,
 				C7D74ADE1E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */,
 				C7D74AD21E999A1300C66BF0 /* Models.swift in Sources */,
 			);
@@ -671,14 +671,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D74ACB1E9993E500C66BF0 /* LoginViewController.swift in Sources */,
+				C7D74AEB1E9AE02400C66BF0 /* LoginViewController.swift in Sources */,
 				C7D74AE31E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */,
 				C7D74ADB1E99A1EA00C66BF0 /* Extensions.swift in Sources */,
 				C7D74ADF1E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */,
 				2BF3DF101E54B79A004DD445 /* MimoiOSCodingChallengeTests.m in Sources */,
 				C7D74AD71E999B1E00C66BF0 /* Webservice+Authentication.swift in Sources */,
-				C7D74ACF1E9998F100C66BF0 /* Webservice.swift in Sources */,
 				C7D74AD31E999A1300C66BF0 /* Models.swift in Sources */,
+				C7D74AE71E9AE00500C66BF0 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,14 +686,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D74ACC1E9993E500C66BF0 /* LoginViewController.swift in Sources */,
+				C7D74AEC1E9AE02400C66BF0 /* LoginViewController.swift in Sources */,
 				C7D74AE41E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */,
 				C7D74ADC1E99A1EA00C66BF0 /* Extensions.swift in Sources */,
 				C7D74AE01E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */,
 				2BF3DF1B1E54B79A004DD445 /* MimoiOSCodingChallengeUITests.m in Sources */,
 				C7D74AD81E999B1E00C66BF0 /* Webservice+Authentication.swift in Sources */,
-				C7D74AD01E9998F100C66BF0 /* Webservice.swift in Sources */,
 				C7D74AD41E999A1300C66BF0 /* Models.swift in Sources */,
+				C7D74AE81E9AE00500C66BF0 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
