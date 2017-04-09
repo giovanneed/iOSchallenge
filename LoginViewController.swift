@@ -11,48 +11,112 @@ import UIKit
 
 class LoginViewController : UIViewController {
 
+    @IBOutlet var login: UITextField!
+    @IBOutlet var password: UITextField!
+    
+    @IBOutlet var email: UITextField!
+    @IBOutlet var registerPassword: UITextField!
+    @IBOutlet var confirmRegisterPassword: UITextField!
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        login.text = "giovanneed@gmail.com"
+        password.text = "teste123"
     }
     
+  
     
     @IBAction func login(_ sender: UIButton) {
         
-       /* Webservice.sharedInstance.signup(withEmail: "teste125@gmail.com", password: "teste123") { (response) in
-            
-            if response.success == true {
-                
-                print(response.id)
-                
-                self.showSimpleAlertWithMessage(message: "New User Successfully Registered!", title: "Success")
-                
-            } else {
-                if let error =  response.errorMessage {
-                    self.showErrorAlert(withWebserviceError: error)
-                }
-            }
-            
-        }*/
+        guard let txtLogin = login.text , let txtPassword = password.text else {
+            self.showSimpleAlertWithMessage(message: "Email and password needed!", title: "Error")
+            return
+        }
         
-        
-        Webservice.sharedInstance.login(withUsername: "giovanneed@gmail.com", password: "teste123") { (loginResponse) in
+        self.showLoading()
+        Webservice.sharedInstance.login(withUsername: txtLogin, password: txtPassword) { (loginResponse) in
             
             if loginResponse.success == true {
-                                
-                let vc = SettingsViewController()
-                vc.email = "giovanneed@gmail.com"
                 
-                self.present(vc, animated: true) {
+                Webservice.sharedInstance.getUserInfo({ (response) in
                     
-                }
+                    let vc = SettingsViewController()
+                    
+                    if let email = response.email {
+                        vc.email = email
+                    }
+                    if let pic = response.picture {
+                        vc.pictureURL = pic
+                    }
+                    self.checkIfIsNewUser(byLogin: vc.email)
+                    DispatchQueue.main.async {
+                        self.present(vc, animated: true) {}
+                    }
+                   
+                })
+                                
                 
             } else {
                 if let error =  loginResponse.errorMessage {
                     self.showErrorAlert(withWebserviceError: error)
                 }
             }
+            self.unshowLoading()
         }
         
+    }
+    
+    
+    @IBAction func register(_ sender: UIButton) {
+        
+        guard let txtEmail = email.text , let txtRegisterPassword = registerPassword.text, let txtConfirmRegisterPassword = confirmRegisterPassword.text else {
+            self.showSimpleAlertWithMessage(message: "Email and password needed!", title: "Error")
+            return
+        }
+        
+        if txtRegisterPassword != txtConfirmRegisterPassword {
+             self.showSimpleAlertWithMessage(message: "Passwords doesn't mach!", title: "Error")
+            return
+        }
+        
+        self.showLoading()
+
+        Webservice.sharedInstance.signup(withEmail: txtEmail, password: txtRegisterPassword) { (response) in
+            
+            if response.success == true {
+                                
+                self.showSimpleAlertWithMessage(message: "New User Successfully Registered!", title: "Success")
+                DispatchQueue.main.async {
+
+                    self.login.text = self.email.text
+                    self.password.text = self.registerPassword.text
+                    self.email.text = ""
+                    self.registerPassword.text = ""
+                    self.confirmRegisterPassword.text = ""
+                }
+                
+                
+                
+            } else {
+                if let error =  response.errorMessage {
+                    self.showErrorAlert(withWebserviceError: error)
+                }
+            }
+            self.unshowLoading()
+
+        }
+    }
+    
+    func checkIfIsNewUser(byLogin login:String){
+        
+        let lastUser = UserDefaults.standard.string(forKey: "LastUser")
+        
+        if login != lastUser {
+            UserDefaults.standard.set(login, forKey: "LastUser")
+            UserDefaults.standard.set(false, forKey: "DarkMode")
+
+        }
+
     }
 }

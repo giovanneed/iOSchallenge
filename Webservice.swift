@@ -26,14 +26,25 @@ public class Webservice : NSObject, URLSessionDelegate {
         
     }
     
+    var loggedToken : Token?
+    
     func createRequest(forURL url: String, method: RouterMethod, parameters: [String:String]?)->NSMutableURLRequest {
         
         
         let url = NSURL(string: "https://mimo-test.auth0.com/" + url)!
         
+        print(url)
+        
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = method.rawValue
         request.addValue("application/json", forHTTPHeaderField: "content-type")
+        
+        if let token = loggedToken?.accessToken {
+            
+            request.addValue("Bearer " + token, forHTTPHeaderField: "authorization")
+
+        }
+        
         
         if let parameters = parameters {
             

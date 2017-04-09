@@ -286,7 +286,8 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 #else
 		avatar = [[SettingsAvatar alloc] init];
 #endif
-		
+        avatar.pictureURL = self.pictureURL;
+        
         [headerView addSubview:avatar];
         
         NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:avatar attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:headerView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f];
@@ -371,7 +372,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)configureCell forRowAtIndexPath:(NSIndexPath *)indexPath {
     SettingsTableViewCell *cell = (SettingsTableViewCell *)configureCell;
     
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.contentView.backgroundColor = self.darkMode ? [UIColor blackColor]  : [UIColor whiteColor];
     cell.activityIndicator.hidden = YES;
 
 	cell.secondaryLabel.hidden = YES;
@@ -411,7 +412,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
             cell.label.hidden = YES;
         }
     } else {
-        cell.label.textColor = [UIColor grayColor];
+        cell.label.textColor = self.darkMode ? [UIColor whiteColor]  : [UIColor grayColor];
         cell.label.hidden = NO;
     }
 }

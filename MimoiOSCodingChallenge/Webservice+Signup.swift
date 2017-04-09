@@ -73,9 +73,7 @@ extension Webservice {
         request.execute { (result) in
             
             var signupResponse = SignupResponse()
-            
-            print(result.data)
-            
+                        
             if let statusCode = result.statusCode {
                 
                 switch statusCode {

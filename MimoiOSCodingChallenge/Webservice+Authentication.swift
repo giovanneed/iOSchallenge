@@ -39,7 +39,6 @@ extension Webservice {
             
             var loginResponse = LoginResponse()
             
-            print(result.data)
             
             if let statusCode = result.statusCode {
                 
@@ -48,6 +47,7 @@ extension Webservice {
                 case 200:
                     loginResponse.success = true
                     loginResponse.token = Token.init(withModel: result.data)
+                    self.loggedToken = loginResponse.token
                     response(loginResponse)
                     return
                     
@@ -58,7 +58,6 @@ extension Webservice {
                     return
                     
                 }
-                print("something went wrong")
             }
         }
         

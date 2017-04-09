@@ -66,6 +66,28 @@
     [self drawAvatarWithFrame:rect];
 }
 
+
+//https://s.gravatar.com/avatar/d155f89f2c2d9dc16436e05a07cf2e73?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fgi.png
+//https%3A%2F%2Fs.gravatar.com%2Favatar%2Fd155f89f2c2d9dc16436e05a07cf2e73%3Fs=480&r=pg&d=https%253A%252F%252Fcdn.auth0.co ... 2Fgi.png
+
+
+-(void)showProfileImageWithFrame:(CGRect)rect {
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        NSURL *URL =  [NSURL URLWithString:self.pictureURL];
+        NSData * imageData = [NSData dataWithContentsOfURL: URL];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [UIImage imageWithData:imageData];
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:rect];
+            imageView.image = image;
+            [self addSubview:imageView];
+            
+        });
+    });
+    
+}
+
 - (void)drawAvatarWithFrame: (CGRect)frame {
     //// General Declarations
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -80,6 +102,12 @@
     CGRect avatarDrawings = CGRectMake(CGRectGetMinX(frame) + 12, CGRectGetMinY(frame) + CGRectGetHeight(frame) - 55, 55, 55);
     CGRect star = CGRectMake(CGRectGetMinX(frame) + CGRectGetWidth(frame) - 28, CGRectGetMinY(frame), 27, 27);
     
+    
+    if (![self.pictureURL isEqualToString:@""]) {
+        [self showProfileImageWithFrame:avatarDrawings];
+    }
+    
+
     
     //// avatarDrawings
     {

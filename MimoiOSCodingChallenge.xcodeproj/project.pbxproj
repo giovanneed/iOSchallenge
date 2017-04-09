@@ -42,6 +42,9 @@
 		C7D74ADE1E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */; };
 		C7D74ADF1E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */; };
 		C7D74AE01E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */; };
+		C7D74AE21E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */; };
+		C7D74AE31E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */; };
+		C7D74AE41E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,7 @@
 		C7D74AD51E999B1E00C66BF0 /* Webservice+Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Webservice+Authentication.swift"; sourceTree = "<group>"; };
 		C7D74AD91E99A1E800C66BF0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Webservice+Signup.swift"; sourceTree = "<group>"; };
+		C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Webservice+UserInfo.swift"; sourceTree = "<group>"; };
 		E18B8DDCBC35C4D884C0C7B3 /* Pods-MimoiOSCodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MimoiOSCodingChallengeTests/Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA866BE4B2BF25DEA765CAF4 /* Pods_MimoiOSCodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +162,7 @@
 				C7D74ACD1E9998F000C66BF0 /* Webservice.swift */,
 				C7D74AD51E999B1E00C66BF0 /* Webservice+Authentication.swift */,
 				C7D74ADD1E9AA05F00C66BF0 /* Webservice+Signup.swift */,
+				C7D74AE11E9AB72900C66BF0 /* Webservice+UserInfo.swift */,
 				C7D74AD91E99A1E800C66BF0 /* Extensions.swift */,
 				C7D74AD11E999A1300C66BF0 /* Models.swift */,
 				2BF3DEF81E54B79A004DD445 /* AppDelegate.h */,
@@ -646,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCC6AB91E55A68400585FA1 /* SettingsAvatar.m in Sources */,
+				C7D74AE21E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */,
 				2BF3DEFD1E54B79A004DD445 /* ViewController.m in Sources */,
 				2BF3DEFA1E54B79A004DD445 /* AppDelegate.m in Sources */,
 				2BCC6AB61E55A55A00585FA1 /* SettingsTableViewCell.swift in Sources */,
@@ -666,6 +672,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7D74ACB1E9993E500C66BF0 /* LoginViewController.swift in Sources */,
+				C7D74AE31E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */,
 				C7D74ADB1E99A1EA00C66BF0 /* Extensions.swift in Sources */,
 				C7D74ADF1E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */,
 				2BF3DF101E54B79A004DD445 /* MimoiOSCodingChallengeTests.m in Sources */,
@@ -680,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7D74ACC1E9993E500C66BF0 /* LoginViewController.swift in Sources */,
+				C7D74AE41E9AB72A00C66BF0 /* Webservice+UserInfo.swift in Sources */,
 				C7D74ADC1E99A1EA00C66BF0 /* Extensions.swift in Sources */,
 				C7D74AE01E9AA05F00C66BF0 /* Webservice+Signup.swift in Sources */,
 				2BF3DF1B1E54B79A004DD445 /* MimoiOSCodingChallengeUITests.m in Sources */,

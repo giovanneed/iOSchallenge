@@ -21,10 +21,15 @@ class SettingsTableViewCell : UITableViewCell {
 	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		backgroundColor = UIColor.white
-		selectionStyle = .default
+        
+        let darkMode = UserDefaults.standard.bool(forKey: "DarkMode")
+        
+        selectionStyle = .default
+        backgroundColor = darkMode ? UIColor.black : UIColor.white
+        self.contentView.backgroundColor = backgroundColor
 		
 		label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = darkMode ? UIColor.white : UIColor.gray
 		
 		contentView.addSubview(label)
 		contentView.addSubview(selectionSwitch)

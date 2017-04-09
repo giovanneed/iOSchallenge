@@ -59,6 +59,10 @@ public struct WebserviceError {
             errorDescription = modelErrorDescription
         }
         
+        if errorDescription == "", let error = error {
+            errorDescription = error
+        }
+        
     }
 }
 

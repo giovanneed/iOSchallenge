@@ -9,6 +9,7 @@
 
 - (void)setup;
 @property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *pictureURL;
 
 
 @end

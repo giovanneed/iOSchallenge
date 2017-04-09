@@ -8,4 +8,8 @@
 @interface SettingsAvatar : UIView
 - (instancetype)initWithPremium:(BOOL)premium;
 - (void)updatePremium:(BOOL)premium;
+
+
+@property (nonatomic, strong) NSString *pictureURL;
+
 @end
