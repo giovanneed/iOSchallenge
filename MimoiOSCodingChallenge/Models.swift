@@ -55,6 +55,9 @@ public struct WebserviceError {
         if let modelErrorDescription = model.value(forKeyPath: "error_description") as? String {
             errorDescription = modelErrorDescription
         }
+        if let modelErrorDescription = model.value(forKeyPath: "description") as? String {
+            errorDescription = modelErrorDescription
+        }
         
     }
 }

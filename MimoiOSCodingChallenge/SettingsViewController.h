@@ -8,5 +8,7 @@
 @interface SettingsViewController : UIViewController
 
 - (void)setup;
+@property (nonatomic, strong) NSString *email;
+
 
 @end

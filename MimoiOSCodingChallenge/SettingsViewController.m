@@ -71,7 +71,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 @property (nonatomic) BOOL didSetConstraints;
 @property BOOL userSubscribed;
 
-@property BOOL darkMode;
+@property (nonatomic) BOOL darkMode;
 
 
 @end
@@ -297,7 +297,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
         UILabel *emailLabel = [[UILabel alloc] init];
         emailLabel.translatesAutoresizingMaskIntoConstraints = NO;
         emailLabel.font = [UIFont systemFontOfSize:self.emailLabelFontSize];
-        emailLabel.text = @"you@getmimo.com";
+        emailLabel.text = self.email;
         emailLabel.textColor = [UIColor grayColor];
         [headerView addSubview:emailLabel];
         
@@ -571,6 +571,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 
 - (void)logout {
 
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)restoreWithCell:(SettingsTableViewCell *)cell {

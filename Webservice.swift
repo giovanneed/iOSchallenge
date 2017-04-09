@@ -13,6 +13,8 @@ public class Webservice : NSObject, URLSessionDelegate {
     
     let kClintID = "PAn11swGbMAVXVDbSCpnITx5Utsxz1co"
     let kConnection = "Username-Password-Authentication"
+
+    
     let kScope = "openid"
     
     enum RouterMethod : String {
@@ -64,7 +66,7 @@ extension NSMutableURLRequest {
             
             do {
                 if let parsedJSON = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                    
+                    print(parsedJSON)
                     result.data = parsedJSON
                     serverResult(result)
                     
